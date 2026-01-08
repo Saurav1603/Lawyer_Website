@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root { height: 100%; }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.25);
+}
+
+body {
+  @apply font-body bg-white text-slate-800;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { @apply font-heading text-primary-900; }
+
+.container { @apply mx-auto px-4 sm:px-6 lg:px-8; }
+
+.btn { @apply inline-flex items-center justify-center rounded-md px-5 py-2.5 font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2 text-sm sm:text-base; }
+.btn-primary { @apply bg-primary-700 text-white hover:bg-primary-800 focus:ring-primary-600; }
+.btn-outline { @apply border border-primary-700 text-primary-800 hover:bg-primary-50; }
+
+.btn-accent { @apply bg-accent-600 text-primary-900 hover:bg-accent-700 focus:ring-accent-600; }
+
+.card { @apply bg-white shadow-soft rounded-xl border border-slate-200/60; }
+.section { @apply py-12 sm:py-16 lg:py-24; }
+
+.surface {
+  @apply bg-white/70 backdrop-blur border border-slate-200/60;
+}
+
+.link { @apply text-primary-700 hover:text-primary-800 underline underline-offset-4 decoration-slate-300; }
+
+.nav-link { @apply text-slate-700 hover:text-primary-800 transition; }
+.nav-link-active { @apply text-primary-800 font-semibold; }
+
+/* Mobile-friendly touch targets */
+@media (max-width: 640px) {
+  .btn {
+    min-height: 44px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
