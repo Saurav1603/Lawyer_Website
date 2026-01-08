@@ -56,12 +56,12 @@ export default function DisclaimerGate({ storageKey = 'lawyerSite:disclaimerAcce
   return createPortal(
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-sm" aria-hidden="true" />
-      <div className="relative mx-auto max-w-3xl px-4 h-full grid place-items-center">
+      <div className="relative mx-auto max-w-3xl px-4 h-full grid place-items-center py-6">
         <div
           role="dialog"
           aria-modal="true"
           aria-labelledby="disclaimer-title"
-          className="card w-full p-6 sm:p-8"
+          className="card w-full p-6 sm:p-8 max-h-[calc(100dvh-3rem)] overflow-auto overscroll-contain"
         >
           <div className="flex items-start justify-between gap-4">
             <div>
@@ -86,7 +86,7 @@ export default function DisclaimerGate({ storageKey = 'lawyerSite:disclaimerAcce
             </p>
           </div>
 
-          <div className="mt-6 flex flex-col-reverse sm:flex-row sm:justify-end gap-3">
+          <div className="mt-6 flex flex-col-reverse sm:flex-row sm:justify-end gap-3 sticky bottom-0 bg-white/95 backdrop-blur border-t border-slate-200/70 pt-4">
             <a className="btn btn-outline text-center" href={declineHref} rel="nofollow">I disagree</a>
             <button className="btn btn-primary" onClick={accept} autoFocus>
               I agree
