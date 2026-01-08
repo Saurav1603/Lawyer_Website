@@ -131,21 +131,6 @@ export default function About() {
                       className="w-full h-full object-cover"
                       loading="eager"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-2 ring-1 ring-white/15">
-                        <span className="h-8 w-8 rounded-full bg-white/15 grid place-items-center font-semibold">PK</span>
-                        <div className="leading-tight">
-                          <div className="text-sm uppercase tracking-[0.18em] text-white/80">Advocate</div>
-                          <div className="text-lg font-semibold">Parth Kumar</div>
-                        </div>
-                      </div>
-                      <div className="mt-3 rounded-xl bg-white/10 backdrop-blur ring-1 ring-white/15 px-4 py-3">
-                        <div className="text-xs text-white/80">Experience</div>
-                        <div className="text-lg font-semibold">25+ Years</div>
-                        <div className="text-sm text-white/80">Courtroom & advisory experience across North Bihar</div>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </div>
