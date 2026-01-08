@@ -8,6 +8,9 @@ import Reveal from '../components/Reveal'
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
+  const officeLat = 26.12456602320733
+  const officeLng = 85.37101256551178
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = new FormData(e.currentTarget)
@@ -126,6 +129,16 @@ export default function Contact() {
                   <div><span className="text-slate-500">Call:</span> <a className="nav-link" href="tel:+918873427256">+91 88734 27256</a></div>
                   <div><span className="text-slate-500">Email:</span> <a className="nav-link" href="mailto:advparth1974@gmail.com">advparth1974@gmail.com</a></div>
                 </div>
+                <div className="mt-4">
+                  <a
+                    className="btn btn-outline w-full text-center"
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${officeLat},${officeLng}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Get directions
+                  </a>
+                </div>
                 <div className="mt-4 text-xs text-slate-500">Mon–Sat, 9:00–6:00. Appointments by request.</div>
               </div>
             </Reveal>
@@ -138,7 +151,7 @@ export default function Contact() {
                   height="360"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=Maripur%2C%20Muzaffarpur%2C%20Bihar&output=embed"
+                  src={`https://www.google.com/maps?q=${officeLat},${officeLng}&z=16&output=embed`}
                   style={{ border: 0 }}
                   aria-label="Map showing office location"
                 />
