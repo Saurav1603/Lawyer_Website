@@ -206,14 +206,14 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
 
                     <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
-                      <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-3 py-2 sm:px-4 sm:py-2 ring-1 ring-white/15 text-white">
+                      <div className="hidden sm:inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-3 py-2 sm:px-4 sm:py-2 ring-1 ring-white/15 text-white">
                         <span className="h-8 w-8 rounded-full bg-white/15 grid place-items-center font-semibold">PK</span>
                         <div className="leading-tight">
                           <div className="text-sm uppercase tracking-[0.18em] text-white/80">Advocate</div>
                           <div className="text-lg font-semibold">Parth Kumar</div>
                         </div>
                       </div>
-                      <div className="mt-3 grid gap-2 sm:gap-3 sm:grid-cols-2">
+                      <div className="mt-0 sm:mt-3 grid gap-2 sm:gap-3 sm:grid-cols-2">
                         <div className="rounded-xl bg-white/10 backdrop-blur ring-1 ring-white/15 px-3 py-2 sm:px-4 sm:py-3 text-white">
                           <div className="text-xs text-white/80">Experience</div>
                           <div className="text-base sm:text-lg font-semibold">25+ Years</div>
@@ -226,6 +226,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-6">
+                    <div className="sm:hidden mb-4">
+                      <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white px-4 py-2">
+                        <span className="h-8 w-8 rounded-full bg-white/15 grid place-items-center font-semibold">PK</span>
+                        <div className="leading-tight">
+                          <div className="text-xs uppercase tracking-[0.18em] text-white/80">Advocate</div>
+                          <div className="text-base font-semibold">Parth Kumar</div>
+                        </div>
+                      </div>
+                    </div>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <div className="text-slate-500">Location</div>
